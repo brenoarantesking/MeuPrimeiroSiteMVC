@@ -22,6 +22,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"); // define a página "inicial"
+    // se a URL não tiver nenhum /controller, nenhum /action e nenhum /id, utilizará os valores Home/Index/opcional
 
 app.Run();

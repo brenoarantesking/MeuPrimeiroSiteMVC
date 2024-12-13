@@ -13,9 +13,9 @@ namespace MeuPrimeiroSiteMVC.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() // ação
         {
-            return View();
+            return View(); // se nada for definido, retorna a view de mesmo nome da ação, da subpasta com mesmo nome do CONTROLLER dentro da pasta VIEW.
         }
 
         public IActionResult Privacy()
