@@ -9,6 +9,11 @@ namespace MeuPrimeiroSiteMVC.Data
 {
     public class ApplicationDbContext : DbContext // cria uma classe derivada de DbContext, que serve como ponto de entrada para interagir com o banco de dados.
     {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) // construtor
+        {
+            
+        }
+
 
     }
 }
