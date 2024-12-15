@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MeuPrimeiroSiteMVC.Models
 {
-    public class Category // classe
+    public class Category // modelo de domínio - representa a lógica do negócio
     {
         // propriedades
         [Key] // Data Annotattions - informa que o dado é chave primária
