@@ -15,7 +15,8 @@ namespace MeuPrimeiroSiteMVC.Data
             
         }
 
-        public DbSet<Category> Categories { get; set; } // DbSet<classe> nome_tabela - cria uma tabelas no banco de dados com o nome Categories
+        // Mapeia qual <classe> para qual tabela do banco quando aplicado o Migrations
+        public DbSet<Category> Categories { get; set; } // DbSet<classe> nome_tabela
 
 
     }
