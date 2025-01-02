@@ -18,6 +18,15 @@ namespace MeuPrimeiroSiteMVC.Data
         // Mapeia qual <classe> para qual tabela do banco quando aplicado o Migrations
         public DbSet<Category> Categories { get; set; } // DbSet<classe> nome_tabela
 
+        // Método utilizado para "popular" a tabela/entidade Category, sempre que atualizar o banco é ncessário uma Migration
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
+                new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
+                new Category { Id = 3, Name = "History", DisplayOrder = 3 }
+                );
+        }
 
     }
 }
